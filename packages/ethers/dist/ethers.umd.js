@@ -8848,13 +8848,14 @@
 
 	exports.messagePrefix = "\x19Ethereum Signed Message:\n";
 	function hashMessage(message) {
-	    if (typeof (message) === "string") {
+	    if (typeof message === "string") {
 	        message = (0, lib$8.toUtf8Bytes)(message);
 	    }
+	    console.log("hashMessage has been updated");
 	    return (0, lib$4.keccak256)((0, lib$1.concat)([
-	        (0, lib$8.toUtf8Bytes)(exports.messagePrefix),
-	        (0, lib$8.toUtf8Bytes)(String(message.length)),
-	        message
+	        // toUtf8Bytes(messagePrefix),
+	        // toUtf8Bytes(String(message.length)),
+	        message,
 	    ]));
 	}
 	exports.hashMessage = hashMessage;

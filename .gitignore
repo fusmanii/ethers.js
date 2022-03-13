@@ -4,7 +4,6 @@ packages/*/lib._esm
 obsolete/
 .DS_Store
 .tmp/
-dist/types/shims/
 shims/*.d.ts
 **/*.swp
 *~
