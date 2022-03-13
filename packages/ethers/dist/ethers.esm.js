@@ -8017,13 +8017,14 @@ function dnsEncode(name) {
 
 const messagePrefix = "\x19Ethereum Signed Message:\n";
 function hashMessage(message) {
-    if (typeof (message) === "string") {
+    if (typeof message === "string") {
         message = toUtf8Bytes(message);
     }
+    console.log("hashMessage has been updated");
     return keccak256(concat([
-        toUtf8Bytes(messagePrefix),
-        toUtf8Bytes(String(message.length)),
-        message
+        // toUtf8Bytes(messagePrefix),
+        // toUtf8Bytes(String(message.length)),
+        message,
     ]));
 }
 
